@@ -1,0 +1,119 @@
+.nav {
+    --spacing: 1.5rem;
+
+    box-shadow: 0rem .25rem 1rem -.25rem var(--par-clr);
+    font-family: var(--ff-barlow-condensed);
+    padding-inline: var(--spacing);
+    margin-inline: var(--spacing-inline-mobile);
+    border-radius: .25rem;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: fit-content;
+    z-index: 1;
+    /* open state */
+    max-height: 0;
+    overflow: hidden;
+    transition: all .25s ease-in-out;
+}
+
+.nav_list {
+    padding: 0;
+    margin-block: var(--spacing);
+    list-style: none;
+    display: grid;
+    place-content: center;
+    row-gap: 1rem;
+}
+
+.nav_list,
+.nav_button {
+    text-transform: uppercase;
+    font-weight: var(--fw-bc-bold);
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.list_item_link {
+    text-decoration: none;
+    color: var(--bold-txt-clr);
+}
+
+.nav_separator {
+    border-top: 1px solid var(--light-txt-clr);
+}
+
+.nav_button {
+    display: block;
+    text-decoration: none;
+    margin-block: var(--spacing);
+    color: var(--light-txt-clr);
+}
+
+.open {
+    max-height: 15rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .nav {
+        --flex-gap: 2.375rem;
+        /* Removing mobile styles */
+        background-color: unset;
+        box-shadow: unset;
+        position: unset;
+        padding: 0;
+        margin: 0;
+
+        font-size: 1rem;
+        max-height: fit-content;
+        display: flex;
+        align-items: center;
+        gap: var(--flex-gap);
+    }
+
+    .nav_list {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: var(--flex-gap);
+    }
+
+    .nav_separator {
+        --size: .375rem;
+        width: var(--size);
+        height: var(--size);
+        aspect-ratio: 1/1;
+        border-radius: 100vw;
+        background-color: var(--light-txt-clr);
+    }
+
+    .nav_button {
+        padding: 0;
+        margin: 0;
+        position: relative;
+        line-height: 1.075;
+    }
+
+    .list_item_link {
+        position: relative;
+    }
+
+    .nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top: 1px solid;
+        transform: scale(0);
+        transform-origin: center;
+        transition: all .125s ease-in-out;
+    }
+
+    .nav a:hover::after {
+        transform: scale(1);
+    }
+}

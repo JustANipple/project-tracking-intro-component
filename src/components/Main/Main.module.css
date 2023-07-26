@@ -1,0 +1,133 @@
+.main {
+    padding-block: 1.5rem;
+    display: grid;
+    row-gap: 3rem;
+    overflow: hidden;
+}
+
+.main_image {
+    max-width: 135%;
+    transform: translateX(.5rem);
+}
+
+.intro {
+    padding: var(--spacing-block-mobile) var(--spacing-inline-mobile);
+    display: grid;
+    row-gap: 1rem;
+}
+
+.intro_subheading {
+    font-family: var(--ff-barlow-condensed);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.subheading_badge,
+.subheading_paragraph,
+.intro_title {
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.subheading_badge {
+    font-size: .875rem;
+    font-weight: var(--fw-bc-bold);
+    letter-spacing: 1px;
+    background-color: var(--bold-txt-clr);
+    border-radius: 100vw;
+    padding: .375rem .675rem;
+    color: white;
+}
+
+.subheading_paragraph {
+    color: var(--light-txt-clr);
+    font-size: 1rem;
+    letter-spacing: 4.5px;
+}
+
+.intro_title {
+    font-family: var(--ff-barlow-condensed);
+    color: var(--bold-txt-clr);
+    font-size: calc(var(--fs) * 2.25);
+}
+
+.intro_paragraph {
+    color: var(--bold-txt-clr);
+    max-width: 28ch;
+}
+
+.intro_foot {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.foot_button {
+    padding: .675rem 1.5rem;
+    font-family: var(--ff-barlow-condensed);
+    font-weight: var(--fw-bc-bold);
+    font-size: .875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--btn-bg-clr);
+    color: white;
+    border: 0;
+    border-radius: .25rem;
+}
+
+.foot_paragraph {
+    font-family: var(--ff-barlow-condensed);
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--light-txt-clr);
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+        padding: 3.5rem var(--spacing-inline-desktop);
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: column;
+        align-items: flex-start;
+    }
+
+    .main_image {
+        grid-column: 2;
+        max-width: 180%;
+        transform: translateX(1.5rem);
+    }
+
+    .intro {
+        padding-inline: 0;
+        grid-column: 1;
+    }
+
+    .intro_title {
+        font-size: calc(var(--fs) * 3.5);
+    }
+
+    .intro_paragraph {
+        margin-block: 1.25rem;
+    }
+
+    .intro_foot {
+        margin-block-start: 1.75rem;
+        gap: 1.75rem;
+    }
+
+    .foot_button {
+        font-size: 1rem;
+        padding-inline: 2rem;
+    }
+
+    .foot_button:hover {
+        cursor: pointer;
+        opacity: 70%;
+    }
+
+    .foot_paragraph {
+        letter-spacing: 4px;
+    }
+}

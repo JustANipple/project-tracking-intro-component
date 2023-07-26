@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap');
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+/* == Custom Properties == */
+:root {
+  /* = Colors = */
+  /* Primary */
+  --btn-bg-clr: hsl(0, 100%, 68%);
+  /* Neutral */
+  --bold-txt-clr: hsl(230, 29%, 20%);
+  --par-clr: hsl(230, 11%, 40%);
+  --light-txt-clr: hsl(231, 7%, 65%);
+  --body-bg-pattern-clr: hsl(207, 33%, 95%);
+
+  /* = Fonts = */
+  --ff-barlow: 'Barlow', sans-serif;
+  --ff-barlow-condensed: 'Barlow Condensed', sans-serif;
+  --fs: 1.125rem;
+  --fw-bc-bold: 700;
+
+  /* = Spacing = */
+  --spacing-block-mobile: 2.375rem;
+  --spacing-inline-mobile: 2rem;
+  --spacing-block-desktop: 4rem;
+  --spacing-inline-desktop: 10.375rem;
+}

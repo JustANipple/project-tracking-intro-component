@@ -1,0 +1,30 @@
+.header {
+    padding: var(--spacing-block-mobile) var(--spacing-inline-mobile);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header_logo {
+    max-width: 1.5rem;
+}
+
+.header_menu_button {
+    background-color: transparent;
+    border: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        padding: var(--spacing-block-desktop) var(--spacing-inline-desktop);
+    }
+
+    .header_logo {
+        max-width: unset;
+    }
+
+    .header_menu_button {
+        display: none;
+    }
+}
